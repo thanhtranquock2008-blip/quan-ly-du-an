@@ -68,6 +68,10 @@ Mọi thay đổi trên công việc, liên kết, nguồn lực được ghi v�
 
 Kết nối repo này với [Vercel](https://vercel.com), chọn framework Vite, thêm hai biến môi trường `VITE_SUPABASE_URL` và `VITE_SUPABASE_ANON_KEY`. Mỗi lần đẩy code lên nhánh chính, Vercel tự đóng gói và cập nhật.
 
+## Cài lên máy chủ nội bộ (miniserver Linux)
+
+Chạy bằng Docker: `docker compose up -d --build`, mở `http://<ip-máy-chủ>:8080`. Hướng dẫn đầy đủ (cài Docker, tự dựng Supabase, sao lưu, truy cập từ xa): [Hướng dẫn cài chương trình lên miniserver Linux](https://claude.ai/artifact/2QxDbuqF6bDT9jXJbrrZx5).
+
 ## Cấu trúc mã nguồn
 
 ```
