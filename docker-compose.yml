@@ -1,0 +1,14 @@
+# Chạy: docker compose up -d --build   → mở http://<địa-chỉ-máy>:8080
+# Muốn dùng Supabase: điền VITE_SUPABASE_URL và VITE_SUPABASE_ANON_KEY trong tệp .env rồi build lại.
+services:
+  app:
+    build:
+      context: .
+      args:
+        VITE_SUPABASE_URL: ${VITE_SUPABASE_URL:-}
+        VITE_SUPABASE_ANON_KEY: ${VITE_SUPABASE_ANON_KEY:-}
+    image: quan-ly-du-an:latest
+    container_name: quan-ly-du-an
+    ports:
+      - "${APP_PORT:-8080}:80"
+    restart: unless-stopped
